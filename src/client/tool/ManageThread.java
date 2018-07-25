@@ -2,6 +2,11 @@ package client.tool;
 
 import java.util.HashMap;
 
+/**
+ * 
+ * @author harry
+ *
+ */
 public class ManageThread{
 	private static HashMap<String, LinkServerThread> hm = new HashMap<String, LinkServerThread>();
 	

@@ -40,16 +40,16 @@ public class Login extends JFrame implements ActionListener {
 		label = new JLabel(new ImageIcon("image/banner01.gif"));
 
 		panelLeft = new JPanel(new GridLayout(3, 3));
-		label_panelLeft = new JLabel("QQ����", JLabel.CENTER);
-		label2_panelLeft = new JLabel("QQ����", JLabel.CENTER);
-		label3_panelLeft = new JLabel("�������", JLabel.CENTER);
+		label_panelLeft = new JLabel("QQ号码", JLabel.CENTER);
+		label2_panelLeft = new JLabel("QQ密码", JLabel.CENTER);
+		label3_panelLeft = new JLabel("忘记密码", JLabel.CENTER);
 		label3_panelLeft.setForeground(Color.blue);
-		label4_panelLeft = new JLabel("�������뱣��", JLabel.CENTER);
-		btn_panelLeft = new JButton("���");
+		label4_panelLeft = new JLabel("申请密码保护", JLabel.CENTER);
+		btn_panelLeft = new JButton("清除");
 		textField_panelLeft = new JTextField();
 		passwordField_panelLeft = new JPasswordField();
-		checkBox_panelLeft = new JCheckBox("�����½");
-		checkBox2_panelLeft = new JCheckBox("��ס����");
+		checkBox_panelLeft = new JCheckBox("隐身登陆");
+		checkBox2_panelLeft = new JCheckBox("记住密码");
 		panelLeft.add(label_panelLeft);
 		panelLeft.add(textField_panelLeft);
 		panelLeft.add(btn_panelLeft);
@@ -61,17 +61,17 @@ public class Login extends JFrame implements ActionListener {
 		panelLeft.add(label4_panelLeft);
 
 		tabbedPane = new JTabbedPane();
-		tabbedPane.add("QQ����", panelLeft);
+		tabbedPane.add("QQ号码", panelLeft);
 		panelMid = new JPanel();
-		tabbedPane.add("�ֻ����", panelMid);
+		tabbedPane.add("手机号码", panelMid);
 		panelRight = new JPanel();
-		tabbedPane.add("�����ʼ�", panelRight);
+		tabbedPane.add("电子邮件", panelRight);
 
 		panel = new JPanel();
-		btn_panel = new JButton("��½");
+		btn_panel = new JButton("登陆");
 		btn_panel.addActionListener(this);
-		btn2_panel = new JButton("ȡ��");
-		btn3_panel = new JButton("��");
+		btn2_panel = new JButton("取消");
+		btn3_panel = new JButton("向导");
 		panel.add(btn_panel);
 		panel.add(btn2_panel);
 		panel.add(btn3_panel);
@@ -80,7 +80,7 @@ public class Login extends JFrame implements ActionListener {
 		this.add(tabbedPane, "Center");
 		this.add(panel, "South");
 
-		this.setTitle("�û���½");
+		this.setTitle("用户登陆");
 		this.setSize(351, 240);
 		this.setLocation(300, 280);
 		this.setResizable(false);
@@ -113,7 +113,7 @@ public class Login extends JFrame implements ActionListener {
 
 				this.dispose();
 			} else {
-				JOptionPane.showMessageDialog(this, "�û�����������");
+				JOptionPane.showMessageDialog(this, "用户名或密码错误");
 			}
 		}
 	}

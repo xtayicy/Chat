@@ -26,10 +26,10 @@ public class List extends JFrame implements ActionListener, MouseListener {
 	CardLayout cardLayout;
 
 	public List(String ownerId) {
-		btn_panel = new JButton("�ҵĺ���");
-		btn2_panel = new JButton("İ����");
+		btn_panel = new JButton("我的好友");
+		btn2_panel = new JButton("陌生人");
 		btn2_panel.addActionListener(this);
-		btn3_panel = new JButton("����");
+		btn3_panel = new JButton("黑名单");
 
 		panel = new JPanel(new BorderLayout());
 		panelCenter = new JPanel(new GridLayout(50, 1, 4, 4));
@@ -55,10 +55,10 @@ public class List extends JFrame implements ActionListener, MouseListener {
 
 		this.owner = ownerId;
 
-		btn_panel2 = new JButton("�ҵĺ���");
+		btn_panel2 = new JButton("我的好友");
 		btn_panel2.addActionListener(this);
-		btn2_panel2 = new JButton("İ����");
-		btn3_panel2 = new JButton("����");
+		btn2_panel2 = new JButton("陌生人");
+		btn3_panel2 = new JButton("黑名单");
 
 		panel2 = new JPanel(new BorderLayout());
 		panelCenter2 = new JPanel(new GridLayout(20, 1, 4, 4));

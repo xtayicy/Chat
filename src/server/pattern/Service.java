@@ -12,8 +12,10 @@ import common.*;
  */
 public class Service {
 	public Service() {
+		ServerSocket serverSocket = null;
+		
 		try {
-			ServerSocket serverSocket = new ServerSocket(9999);
+			serverSocket = new ServerSocket(9999);
 			while (true) {
 				Socket socket = serverSocket.accept();
 				ObjectInputStream objectInputStream = new ObjectInputStream(socket.getInputStream());
@@ -39,6 +41,14 @@ public class Service {
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
+		}finally{
+			if(serverSocket != null){
+				try {
+					serverSocket.close();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			}
 		}
 	}
 }

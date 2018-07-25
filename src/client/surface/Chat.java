@@ -34,7 +34,7 @@ public class Chat extends JFrame implements ActionListener {
 		this.friendId = friendId;
 		textArea = new JTextArea();
 		textField = new JTextField(20);
-		button = new JButton("����");
+		button = new JButton("发送");
 		button.addActionListener(this);
 		panel = new JPanel();
 
@@ -43,7 +43,7 @@ public class Chat extends JFrame implements ActionListener {
 
 		add(textArea);
 		add(panel, "South");
-		setTitle("�����ں�" + friendId + "����");
+		setTitle("你正在和" + friendId + "聊天");
 		setSize(300, 200);
 		setLocation(318, 186);
 		setResizable(false);
@@ -51,7 +51,7 @@ public class Chat extends JFrame implements ActionListener {
 	}
 
 	public void showMessage(Message message) {
-		String content = message.getSender() + "����˵:" + message.getContent() + "\r\n";
+		String content = message.getSender() + "对你说:" + message.getContent() + "\r\n";
 		textArea.append(content);
 	}
 
@@ -68,7 +68,7 @@ public class Chat extends JFrame implements ActionListener {
 				LinkServerThread lst = ManageThread.getLinkServerThread(ownerId);
 				ObjectOutputStream oos = new ObjectOutputStream(lst.getSocket().getOutputStream());
 				oos.writeObject(message);
-				String content = "���" + friendId + "˵:" + textField.getText() + "\r\n";
+				String content = "你对" + friendId + "说:" + textField.getText() + "\r\n";
 				textArea.append(content);
 				textField.setText("");
 			} catch (Exception e2) {

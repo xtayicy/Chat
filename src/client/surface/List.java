@@ -133,5 +133,4 @@ public class List extends JFrame implements ActionListener, MouseListener {
 		JLabel label = (JLabel) e.getSource();
 		label.setForeground(Color.black);
 	}
-
 }

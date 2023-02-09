@@ -1,4 +1,4 @@
-package client.model;
+ package client.model;
 import common.*;
 
 /**
@@ -7,6 +7,7 @@ import common.*;
  *
  */
 public class Authentication {
+	
 	public boolean checkUser(User user){
 		return new Link().send(user);
 	}
